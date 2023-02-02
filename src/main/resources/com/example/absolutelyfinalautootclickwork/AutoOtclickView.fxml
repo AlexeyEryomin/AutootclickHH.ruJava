@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #dfedf3;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.absolutelyfinalautootclickwork.AutoOtclickController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #dfedf3;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.absolutelyfinalautootclickwork.AutoOtclickController">
    <children>
       <AnchorPane prefHeight="87.0" prefWidth="1000.0" style="-fx-background-color: #050349;">
          <children>
@@ -50,31 +43,31 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Button fx:id="myVacancies" layoutX="37.0" layoutY="293.0" mnemonicParsing="false" onAction="#onStartSearchButtonClick" prefHeight="25.0" prefWidth="239.0" text="Начать поиск ID вакансий" />
+      <Button fx:id="myVacancies" layoutX="37.0" layoutY="249.0" mnemonicParsing="false" onAction="#onStartSearchButtonClick" prefHeight="49.0" prefWidth="239.0" text="Начать поиск ID вакансий" />
       <Text layoutX="157.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Шаг 1. Введите название вакансии, количество найденных вакансий за один поиск и количество поисков.">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <TextField fx:id="getVacancyName" layoutX="37.0" layoutY="158.0" prefHeight="25.0" prefWidth="239.0" />
-      <Text layoutX="297.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите название вакансии без пробела">
+      <TextField fx:id="getVacancyName" layoutX="37.0" layoutY="136.0" prefHeight="25.0" prefWidth="239.0" />
+      <Text layoutX="297.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите название вакансии без пробела">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <TextField fx:id="vacanciesFromOneSearch" layoutX="37.0" layoutY="205.0" prefHeight="25.0" prefWidth="239.0" />
-      <Text layoutX="297.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите количество найденных вакансий за один поиск, не больше 100">
+      <TextField fx:id="vacanciesFromOneSearch" layoutX="37.0" layoutY="170.0" prefHeight="25.0" prefWidth="239.0" />
+      <Text layoutX="297.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите количество найденных вакансий за один поиск, не больше 100">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <TextField fx:id="searchIteration" layoutX="37.0" layoutY="252.0" prefHeight="25.0" prefWidth="239.0" />
-      <Text layoutX="297.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите количество циклов поиска">
+      <TextField fx:id="searchIteration" layoutX="37.0" layoutY="204.0" prefHeight="25.0" prefWidth="239.0" />
+      <Text layoutX="297.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите количество циклов поиска">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Label fx:id="idSearchResult" layoutX="297.0" layoutY="297.0" text="Результат">
+      <Label fx:id="idSearchResult" layoutX="297.0" layoutY="249.0" prefHeight="65.0" prefWidth="664.0" text="Результат, внимание - если вы используете бесконечную автоотправку с паузой, нажимать эту &#10;кнопку не нужно это будет происходить автоматически, а поле с названием и количеством &#10;найденных вакансий за один поиск и количество циклов заполниь все равно надо">
          <font>
             <Font size="14.0" />
          </font>
@@ -96,21 +89,32 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <TextArea fx:id="yourMessage" layoutX="31.0" layoutY="516.0" prefHeight="200.0" prefWidth="938.0" />
-      <Text layoutX="402.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ваше сопроводительное письмо">
+      <TextArea fx:id="yourMessage" layoutX="31.0" layoutY="522.0" prefHeight="194.0" prefWidth="938.0" />
+      <Text layoutX="411.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ваше сопроводительное письмо">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Button fx:id="otClicker" layoutX="297.0" layoutY="729.0" mnemonicParsing="false" onAction="#onClickSendAllOtclick" text="Отправить отклик на все найденные id">
+      <Button fx:id="otClicker" layoutX="31.0" layoutY="736.0" mnemonicParsing="false" onAction="#onClickSendAllOtclick" text="Отправить отклик на все найденные id один раз">
          <font>
-            <Font size="20.0" />
+            <Font size="15.0" />
          </font>
       </Button>
-      <Label fx:id="sendOtclickResult" layoutX="748.0" layoutY="741.0" text="Результат">
+      <Label fx:id="sendOtclickResult" layoutX="802.0" layoutY="742.0" text="Результат">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
+      <TextField fx:id="pauseTime" layoutX="723.0" layoutY="468.0" prefHeight="25.0" prefWidth="239.0" promptText="время в минутах" />
+      <Text layoutX="579.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Установите время для повторной отправки в минутах&#10;Внимание после запуска бесконечной отправки интерфейс&#10;перестанет отвечать - это нормально закрывать его не нужно&#10;просто сверните и следите за работой программы&#10; в окне терминала">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="otClicker1" layoutX="411.0" layoutY="736.0" mnemonicParsing="false" onAction="#infinityOtcklick" text="Отправлять с паузой пока программа отрыта ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
