@@ -46,7 +46,7 @@ public class AutoOtclickController {
 
     @FXML
     protected void onStartSearchButtonClick(ActionEvent event) {
-        String vacancy_name_1 = getVacancyName.getText();
+        String vacancy_name_1 = getVacancyName.getText().replaceAll(" ", "+");
         String vacancies_From_One_search_1 = vacanciesFromOneSearch.getText();
         int search_Iteration = parseInt(searchIteration.getText());
         HTTPRequestHHVacancies getjob = new HTTPRequestHHVacancies();
