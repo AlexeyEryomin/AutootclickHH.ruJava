@@ -105,8 +105,8 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="pauseTime" layoutX="723.0" layoutY="468.0" prefHeight="25.0" prefWidth="239.0" promptText="время в минутах" />
-      <Text layoutX="579.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Установите время для повторной отправки в минутах&#10;Внимание после запуска бесконечной отправки интерфейс&#10;перестанет отвечать - это нормально закрывать его не нужно&#10;просто сверните и следите за работой программы&#10;в окне терминала">
+      <TextField fx:id="pauseTime" layoutX="575.0" layoutY="430.0" prefHeight="31.0" prefWidth="347.0" promptText="время в минутах" />
+      <Text layoutX="575.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Установите время для повторной отправки в минутах">
          <font>
             <Font size="14.0" />
          </font>
